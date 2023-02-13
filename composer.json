@@ -1,0 +1,11 @@
+{
+    "name": "marmelo/oop-combat-game",
+    "description": "jeu de role",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Marmelo\\OopCombatGame\\": "src/"
+        }
+    },
+    "require": {}
+}
