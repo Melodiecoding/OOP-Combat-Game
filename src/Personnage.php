@@ -27,6 +27,8 @@ class Personnage {
             }
             $cible->attaque($this);
         }
+
+        echo "You lose!";
         return false;
     }
 
