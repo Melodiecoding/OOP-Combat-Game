@@ -8,7 +8,7 @@ use Marmelo\OopCombatGame\Personnage;
 $marmelo = new Personnage("Marmelo");
 $marmelo->healthPoints = 200;
 $marmelo->attack = 15;
-$marmelo->die();
+$marmelo->isDead();
 
 $minion = new Personnage("Minion");
 $minion->healthPoints = 10;
@@ -26,3 +26,5 @@ dump($marmelo);
 dump($minion);
 dump($lieutenantMinion);
 dump($minionChef);
+
+$marmelo->fight($lieutenantMinion);
