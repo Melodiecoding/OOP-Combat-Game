@@ -5,7 +5,7 @@ namespace Marmelo\OopCombatGame;
 class Personnage {
     public int $healthPoints;
     public int $attack;
-    public $armor;
+    public int $armor = 0;
     public $nom;
 
     public function __construct($nom){
@@ -40,9 +40,13 @@ class Personnage {
         $this->armor += 20;
     }
 
-    public function attaque($cible){
-        $cible->healthPoints -= $this->attack;
-
-        echo "$this->nom a attaqué $cible->nom qui a perdu $this->attack points de vie ! <br>";
+    public function attaque(Personnage $cible){
+        $damageTaken = max(0, $this->attack - $cible->armor);
+        $cible->healthPoints -= $damageTaken;
+        if ($damageTaken == 0) {
+            echo "$this->nom a attaqué $cible->nom qui n'a perdu de points de vie ! <br>";
+        } else {
+            echo "$this->nom a attaqué $cible->nom qui a perdu $this->attack points de vie ! <br>";
+        }
     }
 };
