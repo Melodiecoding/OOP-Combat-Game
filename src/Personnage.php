@@ -34,12 +34,13 @@ class Personnage {
         return $this->healthPoints <= 0;  
     }
 
-    public function attaque($cible){
-        $cible->healthPoints -= $this->attack;
-        echo "$this->nom a attaqué $cible->nom qui a perdu $this->attack points de vie ! <br>";
+    public function protection(){
+        $this->armor += 20;
     }
 
-    public function armure(){
-        
+    public function attaque($cible){
+        $cible->healthPoints -= $this->attack;
+
+        echo "$this->nom a attaqué $cible->nom qui a perdu $this->attack points de vie ! <br>";
     }
 };
