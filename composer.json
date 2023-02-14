@@ -7,5 +7,7 @@
             "Marmelo\\OopCombatGame\\": "src/"
         }
     },
-    "require": {}
+    "require-dev": {
+        "symfony/var-dumper": "^6.2"
+    }
 }
