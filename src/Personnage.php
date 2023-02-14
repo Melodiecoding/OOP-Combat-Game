@@ -46,7 +46,7 @@ class Personnage {
         if ($damageTaken == 0) {
             echo "$this->nom a attaqué $cible->nom qui n'a perdu de points de vie ! <br>";
         } else {
-            echo "$this->nom a attaqué $cible->nom qui a perdu $this->attack points de vie ! <br>";
+            echo "$this->nom a attaqué $cible->nom qui a perdu $damageTaken points de vie ! <br>";
         }
     }
 };

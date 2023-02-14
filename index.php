@@ -29,4 +29,5 @@ dump($minionChef);
 
 $marmelo->fight($minion);
 $marmelo->protection();
+dump($marmelo);
 $marmelo->fight($lieutenantMinion);
